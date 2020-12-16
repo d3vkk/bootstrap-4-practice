@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <title>Bootstrap Practice - Right Sidebar</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/customstyles.css">
+        <style>
+            #sidebar {
+                min-width: 250px;
+                max-width: 250px;
+                min-height: 100vh;
+            }
+
+            #sidebar.active {
+                margin-left: -2000px;
+            }
+
+            #flexbox-content {
+                justify-content: space-between;
+            }
+
+            #flexbox-content.active {
+                justify-content: unset;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar bg-primary">
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" id="sidebarCollapse"
+                data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="row d-flex flex-row" id="flexbox-content">
+            <div class="col-8 " id="content">
+                <p>Spicy jalapeno bacon ipsum dolor amet cow shoulder rump, venison beef hamburger ground round corned
+                    beef swine salami spare ribs pork shankle shank. Jowl pork belly shankle pork loin. Sausage buffalo
+                    beef fatback, swine landjaeger short loin ground round pastrami leberkas jerky cupim short ribs
+                    bresaola. Meatloaf boudin venison meatball turkey short ribs flank tail shoulder ham hock salami
+                    filet mignon capicola sausage. Jerky t-bone turkey kielbasa ball tip spare ribs biltong hamburger
+                    bresaola ham flank chicken alcatra swine ham hock. Venison chislic spare ribs salami beef andouille,
+                    hamburger ham capicola fatback.</p>
+
+                <p>Burgdoggen tongue leberkas jerky, meatball alcatra ham hock kevin doner filet mignon turducken rump
+                    ribeye spare ribs short ribs. Short loin beef ribs hamburger venison. Chuck fatback pancetta pork
+                    loin buffalo filet mignon spare ribs pig beef ribs strip steak beef chicken chislic tail bresaola.
+                    Porchetta corned beef flank jowl shankle sirloin leberkas.</p>
+
+                <p>Spare ribs venison pastrami short loin, bacon beef ribs bresaola frankfurter shankle pork chop pork.
+                    Beef tongue doner leberkas beef ribs. Hamburger beef ribs pork, spare ribs beef capicola porchetta
+                    strip steak. Alcatra ribeye turkey ham hock turducken. Jowl porchetta strip steak meatball short
+                    ribs.</p>
+
+                <p>Strip steak swine alcatra spare ribs kielbasa cupim boudin shank tail pancetta jerky capicola. Corned
+                    beef short ribs turkey doner frankfurter pig bacon bresaola ribeye capicola pork loin. T-bone
+                    shoulder strip steak ham cupim sirloin pastrami flank meatball fatback chislic corned beef kevin
+                    beef ribs tenderloin. Frankfurter venison jowl jerky kielbasa tenderloin ham hock turducken pancetta
+                    sausage porchetta alcatra brisket sirloin bacon. Tail prosciutto alcatra, t-bone flank picanha
+                    brisket meatloaf.</p>
+
+                <p>Cow ball tip shank, beef ribs pork chop shankle flank alcatra pastrami pig. Ham meatball spare ribs
+                    ham hock boudin. Capicola pastrami turkey, t-bone hamburger bresaola tail filet mignon leberkas.
+                    Prosciutto chicken meatball, tri-tip kielbasa short ribs frankfurter cupim pancetta pastrami
+                    chislic. Tri-tip cow shank andouille picanha. Meatball jowl ribeye shoulder tenderloin.</p>
+            </div>
+            <div class="col-md-4 col-0 bg-light" id="sidebar">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" width="30" height="30" alt="">
+                    CompanyName
+                </a>
+                <ul class="nav flex-column nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+
+        <script src="js/popper.min.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    $('#flexbox-content').toggleClass('active');
+                });
+
+            });
+
+        </script>
+    </body>
+</html>
