@@ -9,4 +9,4 @@ Fork or clone this repo
 git clone https://github.com/d3vkk/bootstrap-4-practice.git
 ```
 
-© 2020 Donald K, Sammy Kipkosgei • Under MIT License
+© 2020-present Donald K, Sammy Kipkosgei • Under MIT License
